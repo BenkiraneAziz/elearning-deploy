@@ -1,0 +1,17 @@
+image:
+  repository: your-registry/elearning
+  tag: "1.0.0"
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+
+env:
+  - name: NODE_ENV
+    value: "production"
+  - name: PORT
+    value: "8080"
