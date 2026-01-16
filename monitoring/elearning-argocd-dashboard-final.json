@@ -28,7 +28,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 6,
         "w": 24,
         "x": 0,
         "y": 0
@@ -40,7 +40,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<h2><center>eLearning Application & ArgoCD Status Dashboard</center></h2>\n<table style=\"width:100%; margin-top:20px;\">\n  <tr>\n    <th style=\"text-align:left; padding:10px;\">Application</th>\n    <th style=\"text-align:left; padding:10px;\">External URL</th>\n    <th style=\"text-align:left; padding:10px;\">Namespace</th>\n  </tr>\n  <tr>\n    <td style=\"padding:10px;\">eLearning App</td>\n    <td style=\"padding:10px;\"><a href=\"http://51.159.113.159\" target=\"_blank\">http://51.159.113.159</a></td>\n    <td style=\"padding:10px;\">namespace-elearning</td>\n  </tr>\n  <tr>\n    <td style=\"padding:10px;\">ArgoCD</td>\n    <td style=\"padding:10px;\"><a href=\"https://51.158.107.198\" target=\"_blank\">https://51.158.107.198</a></td>\n    <td style=\"padding:10px;\">namespace-argocd</td>\n  </tr>\n</table>",
+        "content": "<h2><center>eLearning Application & ArgoCD Status Dashboard</center></h2>\n<table style=\"width:100%; margin-top:20px; border-collapse: collapse;\">\n  <tr style=\"background-color: #2c2c2c;\">\n    <th style=\"text-align:left; padding:10px; border: 1px solid #444;\">Application</th>\n    <th style=\"text-align:left; padding:10px; border: 1px solid #444;\">External URL</th>\n    <th style=\"text-align:left; padding:10px; border: 1px solid #444;\">Namespace</th>\n    <th style=\"text-align:left; padding:10px; border: 1px solid #444;\">Deployment</th>\n    <th style=\"text-align:left; padding:10px; border: 1px solid #444;\">Image</th>\n  </tr>\n  <tr>\n    <td style=\"padding:10px; border: 1px solid #444;\">eLearning App</td>\n    <td style=\"padding:10px; border: 1px solid #444;\"><a href=\"http://51.159.113.159\" target=\"_blank\">http://51.159.113.159</a></td>\n    <td style=\"padding:10px; border: 1px solid #444;\">namespace-elearning</td>\n    <td style=\"padding:10px; border: 1px solid #444;\">elearning (1/1)</td>\n    <td style=\"padding:10px; border: 1px solid #444; font-size: 11px;\">rg.fr-par.scw.cloud/namespace-interesting-mccarthy/elearning:0.2</td>\n  </tr>\n  <tr style=\"background-color: #1f1f1f;\">\n    <td style=\"padding:10px; border: 1px solid #444;\">ArgoCD Server</td>\n    <td style=\"padding:10px; border: 1px solid #444;\"><a href=\"https://51.158.107.198\" target=\"_blank\">https://51.158.107.198</a></td>\n    <td style=\"padding:10px; border: 1px solid #444;\">namespace-argocd</td>\n    <td style=\"padding:10px; border: 1px solid #444;\">outil-argocd-server (1/1)</td>\n    <td style=\"padding:10px; border: 1px solid #444; font-size: 11px;\">quay.io/argoproj/argocd:v3.1.9</td>\n  </tr>\n  <tr>\n    <td style=\"padding:10px; border: 1px solid #444;\">ArgoCD Repo Server</td>\n    <td style=\"padding:10px; border: 1px solid #444;\">-</td>\n    <td style=\"padding:10px; border: 1px solid #444;\">namespace-argocd</td>\n    <td style=\"padding:10px; border: 1px solid #444;\">outil-argocd-repo-server (1/1)</td>\n    <td style=\"padding:10px; border: 1px solid #444; font-size: 11px;\">quay.io/argoproj/argocd:v3.1.9</td>\n  </tr>\n  <tr style=\"background-color: #1f1f1f;\">\n    <td style=\"padding:10px; border: 1px solid #444;\">ArgoCD Application Controller</td>\n    <td style=\"padding:10px; border: 1px solid #444;\">-</td>\n    <td style=\"padding:10px; border: 1px solid #444;\">namespace-argocd</td>\n    <td style=\"padding:10px; border: 1px solid #444;\">StatefulSet (1/1)</td>\n    <td style=\"padding:10px; border: 1px solid #444; font-size: 11px;\">quay.io/argoproj/argocd:v3.1.9</td>\n  </tr>\n</table>\n<p style=\"margin-top:15px; font-size: 12px; color: #999;\">💡 To check current deployment status, run: <code style=\"background-color: #2c2c2c; padding: 2px 6px; border-radius: 3px;\">kubectl get deployments -n namespace-elearning</code> and <code style=\"background-color: #2c2c2c; padding: 2px 6px; border-radius: 3px;\">kubectl get deployments -n namespace-argocd</code></p>",
         "mode": "html"
       },
       "pluginVersion": "12.1.0",
@@ -65,6 +65,11 @@
                   "color": "red",
                   "index": 0,
                   "text": "No LBs"
+                },
+                "2": {
+                  "color": "green",
+                  "index": 1,
+                  "text": "2 Active"
                 }
               },
               "type": "value"
@@ -74,7 +79,7 @@
                 "from": 1,
                 "result": {
                   "color": "green",
-                  "index": 1,
+                  "index": 2,
                   "text": "Active"
                 },
                 "to": 999
@@ -98,7 +103,7 @@
         "h": 6,
         "w": 8,
         "x": 0,
-        "y": 4
+        "y": 6
       },
       "id": 2,
       "options": {
@@ -165,7 +170,7 @@
         "h": 6,
         "w": 8,
         "x": 8,
-        "y": 4
+        "y": 6
       },
       "id": 3,
       "options": {
@@ -255,7 +260,7 @@
         "h": 6,
         "w": 8,
         "x": 16,
-        "y": 4
+        "y": 6
       },
       "id": 4,
       "options": {
@@ -355,7 +360,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 10
+        "y": 12
       },
       "id": 5,
       "options": {
@@ -500,7 +505,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 10
+        "y": 12
       },
       "id": 6,
       "options": {
@@ -625,7 +630,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 19
+        "y": 21
       },
       "id": 7,
       "options": {
@@ -764,7 +769,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 19
+        "y": 21
       },
       "id": 8,
       "options": {
