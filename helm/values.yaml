@@ -1,6 +1,6 @@
 image:
   repository: rg.fr-par.scw.cloud/namespace-interesting-mccarthy/elearning
-  tag: "0.4"
+  tag: "0.5"
   pullPolicy: IfNotPresent
 
 replicaCount: 1
